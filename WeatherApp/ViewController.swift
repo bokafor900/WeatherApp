@@ -34,21 +34,29 @@ class ViewController: UIViewController {
     }
     
     func openCityAlert() {
+        // Create Alert Controller
         let alert = UIAlertController(title: "City", message: "Enter city name", preferredStyle: .Alert)
         
+        // Create Cancel Action
         let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         
+        // Create OK action
         let ok = UIAlertAction(title: "OK", style: .Default) { (action: UIAlertAction) -> Void in
             print("OK")
+            let textField = alert.textFields?[0]
+            print(textField?.text)
+            self.cityLabel.text = textField?.text!
         }
         
         alert.addAction(cancel)
         alert.addAction(ok)
         
+        // Add text field
+        alert.addTextFieldWithConfigurationHandler { (textfield: UITextField) -> Void in
+            textfield.placeholder = "City Name"
+        }
         
-        
-        
-        
+        // Present Alert Controller
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
