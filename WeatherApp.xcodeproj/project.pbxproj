@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C519B67C1CFE9A4700D4634B /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519B67B1CFE9A4700D4634B /* WeatherService.swift */; };
 		C5EF6A0F1CFBCAD300952A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6A0E1CFBCAD300952A62 /* AppDelegate.swift */; };
 		C5EF6A111CFBCAD300952A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EF6A101CFBCAD300952A62 /* ViewController.swift */; };
 		C5EF6A141CFBCAD300952A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5EF6A121CFBCAD300952A62 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C519B67B1CFE9A4700D4634B /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		C5EF6A0B1CFBCAD300952A62 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EF6A0E1CFBCAD300952A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5EF6A101CFBCAD300952A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				C5EF6A0E1CFBCAD300952A62 /* AppDelegate.swift */,
 				C5EF6A101CFBCAD300952A62 /* ViewController.swift */,
+				C519B67B1CFE9A4700D4634B /* WeatherService.swift */,
 				C5EF6A121CFBCAD300952A62 /* Main.storyboard */,
 				C5EF6A181CFBCAD300952A62 /* Assets.xcassets */,
 				C5EF6A1A1CFBCAD300952A62 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C519B67C1CFE9A4700D4634B /* WeatherService.swift in Sources */,
 				C5EF6A171CFBCAD300952A62 /* WeatherApp.xcdatamodeld in Sources */,
 				C5EF6A111CFBCAD300952A62 /* ViewController.swift in Sources */,
 				C5EF6A0F1CFBCAD300952A62 /* AppDelegate.swift in Sources */,
@@ -486,6 +490,7 @@
 				C5EF6A381CFBCAD300952A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5EF6A391CFBCAD300952A62 /* Build configuration list for PBXNativeTarget "WeatherAppTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +499,7 @@
 				C5EF6A3B1CFBCAD300952A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5EF6A3C1CFBCAD300952A62 /* Build configuration list for PBXNativeTarget "WeatherAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +508,7 @@
 				C5EF6A3E1CFBCAD300952A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
