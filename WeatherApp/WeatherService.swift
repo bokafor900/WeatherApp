@@ -18,7 +18,9 @@ class WeatherService {
     
     func getWeather(city: String) {
         
-        let path = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=823b9f94ddc4a83d2d9346b0c76a4bbb"
+        let cityEscaped = city.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
+        
+        let path = "http://api.openweathermap.org/data/2.5/weather?q=\(cityEscaped!)&appid=823b9f94ddc4a83d2d9346b0c76a4bbb"
         let url = NSURL(string: path)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
