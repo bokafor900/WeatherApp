@@ -71,6 +71,9 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     func setWeather(weather: Weather) {
         print("*** Set Weather")
         print("City: \(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
+        cityLabel.text = weather.cityName
+        tempLabel.text = "\(weather.temp)"
+        descriptionLabel.text = weather.description
         
     }
 }
