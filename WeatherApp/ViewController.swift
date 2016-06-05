@@ -14,7 +14,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityButton: UIButton!
+    @IBOutlet weak var iconImage: UIImageView!
     
 
     override func viewDidLoad() {
@@ -47,8 +48,8 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         let ok = UIAlertAction(title: "OK", style: .Default) { (action: UIAlertAction) -> Void in
             print("OK")
             let textField = alert.textFields?[0]
-            print(textField?.text)
-            self.cityLabel.text = textField?.text!
+            ///print(textField?.text)
+            ///self.cityLabel.text = textField?.text!
             let cityName = textField?.text
             self.weatherService.getWeather(cityName!)
         }
@@ -69,11 +70,13 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     // MARK: - Weather Service Delegate
     
     func setWeather(weather: Weather) {
-        print("*** Set Weather")
-        print("City: \(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
-        cityLabel.text = weather.cityName
+        //print("*** Set Weather")
+        //print("City: \(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
+        //cityLabel.text = weather.cityName
         tempLabel.text = "\(weather.temp)"
         descriptionLabel.text = weather.description
+        cityButton.setTitle(weather.cityName, forState: .Normal)
+        iconImage.image = UIImage(named: weather.icon)
         
     }
 }
