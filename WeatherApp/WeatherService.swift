@@ -32,8 +32,12 @@ class WeatherService {
             let name = json["name"].string
             let desc = json["weather"][0]["description"].string
             let icon = json["weather"][0]["icon"].string
+            let clouds = json["clouds"]["all"].double
+            let tempMax = json["main"]["temp_max"].double
+            let tempMin = json["main"]["temp_min"].double
+
             
-            let weather = Weather(cityName: name!, temp: temp!, description: desc!, icon: icon!)
+            let weather = Weather(cityName: name!, temp: temp!, description: desc!, icon: icon!, clouds: clouds!, tempMax: tempMax!, tempMin: tempMin!)
             
             
             

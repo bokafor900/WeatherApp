@@ -170,13 +170,13 @@
 				C5EF6A0E1CFBCAD300952A62 /* AppDelegate.swift */,
 				C5EF6A101CFBCAD300952A62 /* ViewController.swift */,
 				C519B67B1CFE9A4700D4634B /* WeatherService.swift */,
+				C519B68B1CFFF3E300D4634B /* Weather.swift */,
 				C519B68F1D020D8D00D4634B /* SwiftyJSON.swift */,
 				C5EF6A121CFBCAD300952A62 /* Main.storyboard */,
 				C5EF6A181CFBCAD300952A62 /* Assets.xcassets */,
 				C5EF6A1A1CFBCAD300952A62 /* LaunchScreen.storyboard */,
 				C5EF6A1D1CFBCAD300952A62 /* Info.plist */,
 				C5EF6A151CFBCAD300952A62 /* WeatherApp.xcdatamodeld */,
-				C519B68B1CFFF3E300D4634B /* Weather.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";

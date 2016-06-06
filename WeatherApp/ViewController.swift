@@ -16,6 +16,9 @@ class ViewController: UIViewController, WeatherServiceDelegate {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var cloudLabel: UILabel!
+    @IBOutlet weak var tempMinLabel: UILabel!
+    @IBOutlet weak var tempMaxLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -73,10 +76,13 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         //print("*** Set Weather")
         //print("City: \(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
         //cityLabel.text = weather.cityName
-        tempLabel.text = "\(weather.temp)"
+        tempLabel.text = "\(weather.tempF)"
         descriptionLabel.text = weather.description
         cityButton.setTitle(weather.cityName, forState: .Normal)
         iconImage.image = UIImage(named: weather.icon)
+        cloudLabel.text = "\(weather.clouds)%"
+        tempMaxLabel.text = "\(weather.tempMaxF)"
+        tempMinLabel.text = "\(weather.tempMinF)"
         
     }
 }
