@@ -94,34 +94,12 @@ class WeatherService {
                 }
             }
             
-            if status == 200 {
-     
-            
 
-            
-            
-            
-            
-            
-
-            
-    
-        }
         }
         
         task.resume()
         
-        // print("Weather Service city: \(city)")
-        // request weather data
-        // wait...
-        // process data
-        /*
-        let weather = Weather(cityName: city, temp: 237.12, description: "A nice day")
-        
-        if delegate != nil {
-            delegate?.setWeather(weather)
-        }
-        */
+
     }
     
 }
