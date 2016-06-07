@@ -76,14 +76,23 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         //print("*** Set Weather")
         //print("City: \(weather.cityName) temp:\(weather.temp) desc:\(weather.description)")
         //cityLabel.text = weather.cityName
-        tempLabel.text = "\(weather.tempF)"
+        tempLabel.text = "\(round(weather.tempF))°"
         descriptionLabel.text = weather.description
         cityButton.setTitle(weather.cityName, forState: .Normal)
         iconImage.image = UIImage(named: weather.icon)
         cloudLabel.text = "\(weather.clouds)%"
-        tempMaxLabel.text = "\(weather.tempMaxF)"
-        tempMinLabel.text = "\(weather.tempMinF)"
+        tempMaxLabel.text = "\(round(weather.tempMaxF))°"
+        tempMinLabel.text = "\(round(weather.tempMinF))°"
         
+    }
+    
+    func weatherErrorWithMessage(message: String) {
+        // display an error message from weather service
+        print("Weather Error Message: \(message)")
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(ok)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 
